@@ -1,7 +1,15 @@
 <template>
   <v-app-bar flat color="white" class="appbar">
-    <div @click.prevent="$router.push('/')" style="cursor: pointer">
-      <v-img alt="jowam logo"></v-img>
+    <div
+      class="company-logo"
+      @click.prevent="$router.push('/')"
+      style="cursor: pointer"
+    >
+      <img
+        width="50px"
+        :src="require('../assets/logo.webp')"
+        alt="jowam logo"
+      />
       <h1>JowamTC - Student Portal</h1>
     </div>
     <v-spacer></v-spacer>
@@ -12,8 +20,16 @@
   </v-app-bar>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .v-toolbar__content {
   padding: 0 3rem;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 1rem;
+  }
 }
 </style>

@@ -4,7 +4,6 @@
 
     <main>
       <section class="prompt">
-        <!-- <div class="prompt-div"> -->
         <div class="img">
           <v-img
             width="100%"
@@ -29,12 +28,11 @@
               dark
               color="green"
               to="/accounts/signup/student"
-              >Student</v-btn
-            >
+              >Student
+            </v-btn>
             <v-btn depressed to="/accounts/signup/instructor">Instructor</v-btn>
           </div>
         </div>
-        <!-- </div> -->
       </section>
     </main>
   </div>
