@@ -11,3 +11,9 @@
     <v-btn depressed color="grey lighten-4" to="/accounts/login">Login</v-btn>
   </v-app-bar>
 </template>
+
+<style scoped>
+.v-toolbar__content {
+  padding: 0 3rem;
+}
+</style>

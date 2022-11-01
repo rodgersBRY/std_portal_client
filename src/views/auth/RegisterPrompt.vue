@@ -21,7 +21,7 @@
           <p>
             An instructor gets access to create modules, notices and much more.
           </p>
-          <p>A Student can view those notices</p>
+          <p>A Student can view their modules and notices</p>
           <div class="action-btns">
             <v-btn
               depressed

@@ -13,10 +13,15 @@
         </div>
         <div class="form">
           <form action="#">
-            <label for="username">Username*</label>
-            <input type="text" name="username" id="username" />
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" v-model="email" />
             <label for="password">Password*</label>
-            <input type="password" name="password" id="password" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              v-model="password"
+            />
 
             <input type="submit" value="Login" />
           </form>
@@ -28,6 +33,10 @@
         </div>
       </section>
     </main>
+
+    <footer>
+      <auth-footer />
+    </footer>
   </div>
 </template>
 
@@ -37,6 +46,14 @@ export default {
 
   components: {
     "auth-nav-bar": require("@/components/auth_navbar.vue").default,
+    "auth-footer": require("@/components/auth_footer.vue").default,
+  },
+
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
   },
 };
 </script>
@@ -55,7 +72,7 @@ export default {
       display: block;
       margin: 2rem 0 0.5rem 0;
     }
-    input[type="text"],
+    input[type="email"],
     input[type="password"] {
       padding: 10px;
       border: 1px solid rgb(224, 224, 224);
@@ -90,5 +107,10 @@ export default {
       }
     }
   }
+}
+
+footer {
+  position: absolute;
+  bottom: 2%;
 }
 </style>
