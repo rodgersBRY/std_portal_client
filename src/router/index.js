@@ -30,6 +30,11 @@ const routes = [
     name: "Modules",
     component: () => import("../views/Modules.vue"),
   },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: () => import("../views/Profile.vue"),
+  },
 ];
 
 const router = new VueRouter({

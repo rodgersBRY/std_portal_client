@@ -62,13 +62,9 @@ export default {
 
 <style lang="scss" scoped>
 .modules {
-  display: flex;
-  header {
-    flex: 1;
-  }
 
   main {
-    flex: 5;
+    margin-left: 260px;
     .v-card {
       margin: auto;
       .accordion {

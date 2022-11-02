@@ -22,7 +22,7 @@
         ><span><v-icon color="white">mdi-calendar-text-outline</v-icon></span
         >Notices</router-link
       >
-      <router-link class="nav-link" tag="li" active-class="active" to="#"
+      <router-link class="nav-link" tag="li" active-class="active" to="/profile"
         ><span><v-icon color="white">mdi-school-outline</v-icon></span
         >My Profile</router-link
       >
@@ -40,8 +40,12 @@
 
 <style lang="scss" scoped>
 .sidenav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
   color: white;
   height: 100vh;
+  width: 260px;
   padding: 4rem 10px 0 10px;
   .nav-links {
     list-style: none;
