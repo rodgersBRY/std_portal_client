@@ -28,7 +28,9 @@
           <v-divider class="mb-8"></v-divider>
           <div class="recover-account">
             <p>Forgot Password?</p>
-            <p>Don't have an account?</p>
+            <p @click="$router.push('/accounts/signup')">
+              Don't have an account?
+            </p>
           </div>
         </div>
       </section>
