@@ -27,8 +27,13 @@
           </form>
           <v-divider class="mb-8"></v-divider>
           <div class="recover-account">
-            <p>Forgot Password?</p>
-            <p>Don't have an account?</p>
+            <p style="cursor: pointer">Forgot Password?</p>
+            <p
+              @click="$router.push('/accounts/signup')"
+              style="cursor: pointer"
+            >
+              Don't have an account?
+            </p>
           </div>
         </div>
       </section>
@@ -111,6 +116,6 @@ export default {
 
 footer {
   position: absolute;
-  bottom: 2%;
+  bottom: 1%;
 }
 </style>

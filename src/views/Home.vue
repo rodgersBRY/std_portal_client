@@ -24,6 +24,7 @@
               outlined
               color="green darken-3"
               style="text-transform: capitalize"
+              :to="cat.link"
               >{{ cat.btnText
               }}<span>
                 <v-icon>mdi-arrow-right</v-icon>
@@ -48,18 +49,21 @@ export default {
           title: "My Modules",
           text: "All courses you are currently enrolled in.",
           btnText: "My Modules",
+          link: "/modules",
         },
         {
           img: require("../assets/retro.svg"),
           title: "Notices",
           text: "All notices that need your attention.",
           btnText: "Notices",
+          link: "#",
         },
         {
           img: require("../assets/cranium.svg"),
           title: "Events",
           text: "Upcoming events you'll be interested in.",
           btnText: "Events",
+          link: "#",
         },
       ],
     };
@@ -70,7 +74,7 @@ export default {
 <style lang="scss" scoped>
 .home {
   main {
-    margin:auto 0  0 260px;
+    margin: auto 0 0 260px;
     padding: 1rem;
     height: 80vh;
     width: 80%;

@@ -24,14 +24,13 @@
       <section class="modules">
         <v-card class="px-10 py-3">
           <v-card-title class="pl-0">
-            <h1>Modules</h1>
+            <h1>{{ profileInfo.course }} Topics</h1>
           </v-card-title>
           <v-divider />
-          <p class="mt-6">
-            Mixology <span class="green--text ml-3">Completed</span>
-          </p>
-          <p>Barista <span class="green--text ml-3">Completed</span></p>
-          <p>Roasting <span class="orange--text ml-3">In Progress</span></p>
+          <p class="grey--text mt-5">Introduction to Coffee</p>
+          <p class="grey--text">Green Coffee Assessment</p>
+          <p class="grey--text">Cupping Analysis</p>
+          <p class="grey--text">Coffee Roasting</p>
         </v-card>
       </section>
 

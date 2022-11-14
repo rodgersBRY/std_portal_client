@@ -150,6 +150,7 @@ form {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  bottom: 1%;
 }
 </style>

@@ -27,7 +27,7 @@
         >My Profile</router-link
       >
       <router-link
-        class="nav-link"
+        class="nav-link mt-16"
         tag="li"
         active-class="active"
         to="/accounts/login"
