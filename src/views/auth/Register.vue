@@ -4,24 +4,31 @@
     <main>
       <form action="#" v-if="role === 'student'">
         <h1 class="mb-10">Sign up as a Student</h1>
+
+        <label for="name">Full Name<span>*</span></label>
+        <input type="text" name="name" v-model="studentForm.name" />
+
         <div class="align-row">
           <div class="mr-6">
-            <label for="fname">First Name*</label>
-            <input type="text" name="fname" v-model="studentForm.fname" />
+            <label for="email">Email<span>*</span></label>
+            <input type="email" name="email" v-model="studentForm.email" />
           </div>
           <div>
-            <label for="lname">Last Name*</label>
-            <input type="text" name="fname" v-model="studentForm.lname" />
+            <label for="gender">Gender<span>*</span></label>
+            <select name="gender" v-model="studentForm.gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
           </div>
         </div>
 
         <div class="align-row">
           <div class="mr-6">
-            <label for="email">Email*</label>
-            <input type="email" name="email" v-model="studentForm.email" />
+            <label for="age">Age<span>*</span></label>
+            <input type="text" name="age" v-model="studentForm.age" />
           </div>
           <div>
-            <label for="lname">Module*</label>
+            <label for="modules">Module<span>*</span></label>
             <select name="modules" v-model="studentForm.modules">
               <option value="mixology">Mixology</option>
               <option value="barista">Barista</option>
@@ -30,9 +37,9 @@
           </div>
         </div>
 
-        <label for="password">Password*</label>
+        <label for="password">Password<span>*</span></label>
         <input type="password" name="password" v-model="studentForm.password" />
-        <label for="confirmPass">Password Confirmation*</label>
+        <label for="confirmPass">Password Confirmation<span>*</span></label>
         <input
           type="password"
           name="confirmPass"
@@ -47,20 +54,41 @@
       <form action="#" v-else-if="role === 'instructor'">
         <h1 class="mb-10">Sign up as an Instructor</h1>
 
-        <label for="email">Email*</label>
+        <label for="name">Full Name<span>*</span></label>
+        <input
+          type="name"
+          name="name"
+          id="name"
+          v-model="instructorForm.name"
+        />
+
+        <label for="email">Email<span>*</span></label>
         <input
           type="email"
           name="email"
           id="email"
           v-model="instructorForm.email"
         />
-        <label for="password">Password*</label>
+
+        <label for="age">Age<span>*</span></label>
+        <input type="age" name="age" id="age" v-model="instructorForm.age" />
+
+        <label for="gender">Gender<span>*</span></label>
+        <select name="gender" id="gender">
+          Gender
+          <span>*</span>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        <label for="password">Password<span>*</span></label>
         <input
           type="password"
           name="password"
           v-model="instructorForm.password"
         />
-        <label for="confirmPass">Password Confirmation*</label>
+
+        <label for="confirmPass">Password Confirmation<span>*</span></label>
         <input
           type="password"
           name="confirmPass"
@@ -93,17 +121,21 @@ export default {
       role: this.$route.params.role,
 
       studentForm: {
-        fname: "",
-        lname: "",
+        name: "",
         email: "",
+        age: null,
+        gender: "",
         modules: "",
         password: "",
         confirmPass: "",
       },
 
       instructorForm: {
+        name: "",
         email: "",
         password: "",
+        age: null,
+        gender: "",
         confirmPass: "",
       },
     };
@@ -129,6 +161,10 @@ form {
   label {
     display: block;
     margin: 1.5rem 0 5px 0;
+    span {
+      color: red;
+      margin-left: 3px;
+    }
   }
   .align-row {
     display: flex;
