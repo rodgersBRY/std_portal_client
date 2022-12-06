@@ -1,6 +1,6 @@
 <template>
   <div>
-      <v-img width="50px" :src="require('../assets/logo.webp')"></v-img>
+    <img width="50px" :src="require('../assets/logo.webp')" />
     <h3>Student Portal</h3>
     <v-divider vertical class="grey lighten-3 mx-10"></v-divider>
     <p>
@@ -12,11 +12,14 @@
 
 <script>
 export default {
+  name: "footer",
+
   data() {
     return {
       year: new Date().getFullYear(),
     };
   },
+  
 };
 </script>
 
